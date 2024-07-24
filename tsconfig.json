@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"esModuleInterop": true,
+		"pretty": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"lib": ["es2017", "dom"],
+		"jsx": "react-jsx",
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"outDir": "./dist",
+		"baseUrl": "./src",
+		"rootDir": "./src",
+		"paths": { "*": ["*"] },
+		"typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
+	},
+	"include": ["src"]
+}

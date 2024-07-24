@@ -1,0 +1,49 @@
+{
+  "name": "figma-plugin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "yarn build:canvas && yarn build:plugin",
+    "build:canvas": "vite build -c ./vite.config.canvas.ts",
+    "build:plugin": "vite build -c ./vite.config.plugin.ts",
+    "dev": "concurrently \"yarn build:canvas --watch\" \"yarn build:plugin --watch\"",
+    "lint": "yarn lint:js",
+    "lint:js": "eslint --quiet --fix",
+    "lint:css": "stylelint 'src/**/*.css'"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "reshaped": "3.0.7"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "1.96.0",
+    "@types/node": "^20.14.8",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "concurrently": "^8.2.2",
+    "eslint": "9.5.0",
+    "typescript-eslint": "7.13.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-recommended": "4.1.0",
+    "eslint-plugin-jsx-a11y": "6.9.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "lefthook": "1.6.18",
+    "postcss": "8.4.38",
+    "prettier": "3.3.2",
+    "stylelint": "16.6.1",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-standard": "36.0.1",
+    "typescript": "5.5.2",
+    "vite": "5.3.1",
+    "vite-plugin-generate-file": "0.1.1",
+    "vite-plugin-singlefile": "2.0.2",
+    "@eslint/js": "9.5.0",
+    "@types/eslint__js": "8.42.3"
+  }
+}
